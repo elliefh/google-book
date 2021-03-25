@@ -22,6 +22,11 @@ const booksSchema = new mongoose.Schema({
     type: String,
     default: "",
     unique: true
+  },
+  saved: {
+    type: Boolean,
+    default: false,
+    required: true
   }
 });
 
