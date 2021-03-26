@@ -1,14 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
-import Header from './components/Header';
+import Search from './pages/search';
+import Saved from './pages/saved';
+// import Footer from './components/Footer';
 
 function App() {
   return (
-    <div>
+    <Router>
       <Navbar/>
-      <Header/>
-    </div>
+      <Route>
+        <Route exact path="/" component={Search} />
+        <Route exact path="/saved" component={Saved} />
+      </Route>
+    </Router>
   );
 }
 
