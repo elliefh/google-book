@@ -1,11 +1,12 @@
 import React from "react";
 import Logo from "../Assets/logo.png";
+import {Link} from "react-router-dom";
 // eslint-disable-next-line
 
 function Navbar() {
     return(
         
-    <nav className="navbar is-light" role="navigation" aria-label="main navigation">
+    <nav className="navbar is-info" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
             <a className="navbar-item">
                 <img src={Logo} width="112" height="28"></img>
@@ -18,12 +19,12 @@ function Navbar() {
         </div>
         <div id="navbarBasicExample" className="navbar-menu">
             <div className="navbar-start">
-                <a className="navbar-item">
+                <Link className="navbar-item" to="/"> 
                     Search Books
-                </a>
-                <a className="navbar-item">
+                </Link>
+                <Link className="navbar-item" to="/saved">
                     Saved Books
-                </a>
+                </Link>
             </div>
         </div>
     </nav>
