@@ -1,6 +1,8 @@
+import SavedHero from '../components/SavedHero';
+
 function Saved() {
     return(
-        <div>Hello</div>
+        <SavedHero/>
     )
 }
 
