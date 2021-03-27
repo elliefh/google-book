@@ -12,8 +12,8 @@ function Search() {
     // call google books api with 'search' as parameter
     async function handleFormSubmit(event) {
         event.preventDefault();
-        const results = await API.searchBook; 
-        setBooks(results.data);
+        const results = await API.searchBook(query); 
+        setBooks(results.data.items);
     }
 
     console.log(searchBooks);
