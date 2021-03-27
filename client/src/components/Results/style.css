@@ -1,0 +1,11 @@
+.card {
+    margin: 30px;
+}
+
+img {
+    margin: 5px;
+}
+
+.card-header {
+    background-color: #3498db;
+}
