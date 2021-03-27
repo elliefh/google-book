@@ -1,7 +1,11 @@
 import React from "react";
 import "./style.css";
 
-function SearchHero() {
+function SearchHero({query, setQuery, handleFormSubmit}) {
+    function handleInputChange(event) {
+        setQuery(event.target.value);
+    }
+
     return(
         <section className="hero is-small">
             <div className="hero-body has-text-centered">
@@ -13,8 +17,13 @@ function SearchHero() {
                 </p>
                 <div className="columns is-centered">
                     <div className="column is-half">
-                        <input className="input is-rounded" type="text" placeholder="e.g., Harry Potter"></input>
-                        <button className="button is-rounded is-info" type="submit">Search</button>
+                        <input className="input is-rounded" 
+                        value={query}
+                        onChange={handleInputChange}
+                        type="text" 
+                        placeholder="e.g., Harry Potter">
+                        </input>
+                        <button className="button is-rounded is-info" type="submit" onClick={handleFormSubmit}>Search</button>
                     </div>
                 </div>
             </div>
