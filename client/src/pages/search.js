@@ -1,6 +1,6 @@
 import SearchHero from '../components/SearchHero';
 import { SearchResults } from "../components/Results";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import API from "../utils/API";
 
 
@@ -28,10 +28,11 @@ function Search() {
             {
                 searchBooks.map(searchBook => (
                     <SearchResults
+                    key = {searchBook.id}
                     title = {searchBook.volumeInfo.title}
                     authors = {searchBook.volumeInfo.authors}
                     description = {searchBook.volumeInfo.description}
-                    image = {searchBook.volumeInfo.imageLinks.smallThumbnail}
+                    image = {searchBook.volumeInfo.imageLinks.thumbnail}
                     href = {searchBook.volumeInfo.infoLink}
                     />
                 ))
