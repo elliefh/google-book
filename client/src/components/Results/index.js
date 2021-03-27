@@ -10,9 +10,13 @@ export function SearchResults(props) {
         <div className="columns">
           <div className="column">
             <header className="card-header">
-              <p className="card-header-title">
-                Title: {props.title}<br/> 
-                Author(s): {props.authors}
+              <p className="book-title">
+                {props.title}<br/> 
+              </p>
+            </header>
+            <header className="card-header">
+              <p className="book-author">
+                Written by: {props.authors}
               </p>
             </header>
 
@@ -42,8 +46,8 @@ export function SearchResults(props) {
             <div className="column">
               <footer className="card-footer">
                 <div className="buttons has-addons">
-                  <button className="button"><a href={props.href} rel="noreferrer" target="_blank">View</a></button>
-                  <button className="button">Save</button>
+                  <button className="button is-info is-light"><a href={props.href} rel="noreferrer" target="_blank">View</a></button>
+                  <button className="button is-danger is-light">Save</button>
                 </div>
               </footer>
             </div>
