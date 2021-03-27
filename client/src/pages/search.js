@@ -25,7 +25,17 @@ function Search() {
                 setQuery={setQuery}
                 handleFormSubmit={handleFormSubmit}
             />
-            <SearchResults/>
+            {
+                searchBooks.map(searchBook => (
+                    <SearchResults
+                    title = {searchBook.volumeInfo.title}
+                    subtitle = {searchBook.volumeInfo.subtitle}
+                    authors = {searchBook.volumeInfo.authors}
+                    description = {searchBook.volumeInfo.description}
+                    image = {searchBook.volumeInfo.imageLinks.smallThumbnail}
+                    />
+                ))
+            }
         </div>
     )
 }
