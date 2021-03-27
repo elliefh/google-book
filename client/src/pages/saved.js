@@ -1,5 +1,5 @@
 import SavedHero from '../components/SavedHero';
-import Results from "../components/Results";
+import { SavedResults } from "../components/Results";
 import React, { useState, useEffect } from "react";
 import API from "../utils/API";
 
@@ -26,7 +26,7 @@ function Saved() {
     return(
         <div>
             <SavedHero/>
-            <Results/>
+            <SavedResults/>
         </div>
 )
 }

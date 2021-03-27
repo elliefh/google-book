@@ -1,5 +1,5 @@
 import SearchHero from '../components/SearchHero';
-import Results from "../components/Results";
+import { SearchResults } from "../components/Results";
 import React, { useState, useEffect } from "react";
 import API from "../utils/API";
 
@@ -25,7 +25,7 @@ function Search() {
                 setQuery={setQuery}
                 handleFormSubmit={handleFormSubmit}
             />
-            <Results/>
+            <SearchResults/>
         </div>
     )
 }
