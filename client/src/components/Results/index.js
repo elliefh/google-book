@@ -40,11 +40,11 @@ function Results(props) {
               {/* Closing tag for nested columns */}
             </div>
 
-            <div class="column">
-              <footer class="card-footer">
-                <div class="buttons has-addons">
-                  <button class="button is-info">View</button>
-                  <button class="button is-dark">Save</button>
+            <div className="column">
+              <footer className="card-footer">
+                <div className="buttons has-addons">
+                  <button className="button is-info">View</button>
+                  <button className="button is-dark">Save</button>
                 </div>
               </footer>
             </div>
