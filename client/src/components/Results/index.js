@@ -42,7 +42,7 @@ export function SearchResults(props) {
             <div className="column">
               <footer className="card-footer">
                 <div className="buttons has-addons">
-                  <button className="button"><a href={props.href} target="_blank">View</a></button>
+                  <button className="button"><a href={props.href} rel="noreferrer" target="_blank">View</a></button>
                   <button className="button">Save</button>
                 </div>
               </footer>
