@@ -8,9 +8,9 @@ function Navbar() {
         
     <nav className="navbar is-info" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
-            <a className="navbar-item">
-                <img src={Logo} width="112" height="28"></img>
-            </a>
+            <div className="navbar-item">
+                <img src={Logo} width="112" height="28" alt="application-logo"></img>
+            </div>
             <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
