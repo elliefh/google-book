@@ -11,8 +11,8 @@ export function SearchResults(props) {
           <div className="column">
             <header className="card-header">
               <p className="card-header-title">
-                Title: {props.title}<br/>
-                Written By: {props.authors}
+                {props.title} {props.subtitle} <br/> 
+                Author(s): {props.authors}
               </p>
             </header>
 
@@ -22,8 +22,8 @@ export function SearchResults(props) {
               {/* First Nested Column */}
               <div className="column is-one-third">
                 <div className="card-image">
-                  <figure className="image is-4by3">
-                    <img src="https://bulma.io/images/placeholders/1280x960.png" alt="book-cover"></img>
+                  <figure className="image">
+                    <img src={props.image} alt="book-cover"></img>
                   </figure>
                 </div>
               </div>
@@ -33,7 +33,6 @@ export function SearchResults(props) {
                 <div className="card-content">
                   <div className="content">
                     {props.description}
-                    Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
                   </div>
                 </div>
               </div>
