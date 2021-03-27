@@ -29,10 +29,10 @@ function Search() {
                 searchBooks.map(searchBook => (
                     <SearchResults
                     title = {searchBook.volumeInfo.title}
-                    subtitle = {searchBook.volumeInfo.subtitle}
                     authors = {searchBook.volumeInfo.authors}
                     description = {searchBook.volumeInfo.description}
                     image = {searchBook.volumeInfo.imageLinks.smallThumbnail}
+                    href = {searchBook.volumeInfo.infoLink}
                     />
                 ))
             }
