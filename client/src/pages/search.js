@@ -1,8 +1,12 @@
 import SearchHero from '../components/SearchHero';
+import Results from "../components/Results";
 
 function Search() {
     return(
-        <SearchHero/>
+        <div>
+            <SearchHero/>
+            <Results/>
+        </div>
     )
 }
 
