@@ -47,7 +47,7 @@ export function SearchResults(props) {
               <footer className="card-footer">
                 <div className="buttons has-addons">
                   <button className="button is-info is-light"><a href={props.href} rel="noreferrer" target="_blank">View</a></button>
-                  <button className="button is-danger is-light">Save</button>
+                  <button id = {props.id} className="button is-danger is-light" onClick={props.handleSave}>Save</button>
                 </div>
               </footer>
             </div>
@@ -103,7 +103,7 @@ export function SavedResults(props) {
               <footer className="card-footer">
                 <div className="buttons has-addons">
                   <button className="button"><a href={props.href}>View</a></button>
-                  <button className="button">Delete</button>
+                  <button className="button" onClick={props.handleDelete}>Delete</button>
                 </div>
               </footer>
             </div>
