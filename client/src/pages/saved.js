@@ -23,6 +23,7 @@ function Saved() {
 
     const handleDelete = (event) => {
         event.preventDefault();
+        console.log(event.target.id);
         API.deleteBook(event.target.id)
           .then(res => loadBooks())
           .catch(err => console.log(err));
@@ -33,15 +34,16 @@ function Saved() {
     return(
         <div>
             <SavedHero/>
-            <SavedResults
-            id = {savedBooks.id}
-            title = {savedBooks.volumeInfo.title}
-            authors = {savedBooks.volumeInfo.authors}
-            description = {savedBooks.volumeInfo.description}
-            image = {savedBooks.volumeInfo.imageLinks.thumbnail}
-            href = {savedBooks.volumeInfo.infoLink}
+            {savedBooks.map(savedBook => (<SavedResults
+            id = {savedBook.id}
+            title = {savedBook.title}
+            authors = {savedBook.authors}
+            description = {savedBook.description}
+            image = {savedBook.image}
+            href = {savedBook.href}
             handleDelete = {handleDelete}
             />
+            ))}
         </div>
 )
 }

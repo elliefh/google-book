@@ -103,7 +103,7 @@ export function SavedResults(props) {
               <footer className="card-footer">
                 <div className="buttons has-addons">
                   <button className="button"><a href={props.href}>View</a></button>
-                  <button className="button" onClick={props.handleDelete}>Delete</button>
+                  <button id = {props.id} className="button" onClick={props.handleDelete}>Delete</button>
                 </div>
               </footer>
             </div>

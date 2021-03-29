@@ -22,6 +22,7 @@ function Search() {
         let selectedBook = searchBooks.filter(book => book.id === event.target.id);
         console.log(selectedBook[0]);
         API.saveBook({
+            id: event.target.id,
             title: selectedBook[0].volumeInfo.title,
             authors: selectedBook[0].volumeInfo.authors,
             description: selectedBook[0].volumeInfo.description,
@@ -29,7 +30,7 @@ function Search() {
             href: selectedBook[0].volumeInfo.infoLink,
             saved: true
         })
-            .then(console.log("You saved the following Book: " + selectedBook[0].volumeInfo.title))
+            .then(success => console.log("You saved the following Book: " + selectedBook[0].volumeInfo.title))
             .catch(err => console.log(err))
       }
 
