@@ -1,57 +1,53 @@
 # Google Books Search
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-### Overview
+## Table of Contents
+  - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+  - [Links](#links)
+  - [Installation](#installation)
+  - [Resources](#resources)
+  - [License](#license)
 
-In this activity, you'll create a new React-based Google Books Search app. This assignment requires you to create React components, work with helper/util functions, and utilize React lifecycle methods to query and display books based on user searches. You'll also use Node, Express and MongoDB so that users can save books to review or purchase later.
+## Description
 
-* Deploy this application using Heroku, follow our guide on [deploying MERN applications to Heroku](../04-Important/MERNHerokuDeploy.md) to do so.
+Google Book is a React-based application that utilizes the Google Books API, Express, Node, and MongoDB. Users can search for books via the Google Books API and the information will be displayed accordingly. On the search page, User has the option to "View" a book, bringing them to the book on Google Books, or "Save" a book, saving it to the Mongo database. On the save page, User has an option to "View" the book, bringing them to the book on Google Books, or "Delete" a book, removing it from the Mongo database.
 
-  * [Search](Search.png) - User can search for books via the Google Books API and render them here. User has the option to "View" a book, bringing them to the book on Google Books, or "Save" a book, saving it to the Mongo database.
+![Image](./demo.gif)
 
-  * [Saved](Saved.png) - Renders all books saved to the Mongo database. User has an option to "View" the book, bringing them to the book on Google Books, or "Delete" a book, removing it from the Mongo database.
+## Links
+- [Repository](https://github.com/elliefh/google-book)
+- [Deployed](https://googlebooks-efh.herokuapp.com/#/)
 
-1. Start by using the [01-Ins_Mern/create-react-express](../01-Activities/01-Ins_Mern/create-react-express) example as a base for your application.
+## Installation
+The following command should be run to install necessary dependencies: 
+```bash
+npm i
+```
 
-2. Add code to connect to a MongoDB database named `googlebooks` using the mongoose npm package.
+## Resources
+- React.js
+- Bulma.io
+- Bobbi Tarkany 
 
-3. Using mongoose, then create a Book schema.
+## License
 
-* Creating `documents` in your `books` collection similar to the following:
+Copyright (c) [2021] [Ellie Fu-Hinthorn]
 
-    ```js
-    {
-      authors: ["Suzanne Collins"]
-      description: "Set in a dark vision of the near future, a terrifying reality TV show is taking place. Twelve boys and twelve girls are forced to appear in a live event called The Hunger Games. There is only one rule: kill or be killed. When sixteen-year-old Katniss Everdeen steps forward to take her younger sister's place in the games, she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature."
-      image: "http://books.google.com/books/content?id=sazytgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-      link: "http://books.google.com/books?id=sazytgAACAAJ&dq=title:The+Hunger+Games&hl=&source=gbs_api"
-      title: "The Hunger Games"
-    }
-    ```
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-1. Create a layout similar to the mockups displayed above. This should be a SPA (Single Page Application) that uses [`react-router-dom`](https://github.com/reactjs/react-router) to navigate, hide and show your React components without changing the route within Express.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-* The layout should include at least two React Components for each page `Search` and `Saved`.
-
-* Feel free to try out alternative CSS framework to Bootstrap.
-
-6. Add the following Express routes for your app:
-
-* `/api/books` (get) - Should return all saved books as JSON.
-
-* `/api/books` (post) - Will be used to save a new book to the database.
-
-* `/api/books/:id` (delete) - Will be used to delete a book from the database by Mongo `_id`.
-
-* `*` (get) - Will load your single HTML page in `client/build/index.html`. Make sure you have this _after_ all other routes are defined.
-
-* Deploy your application to Heroku once complete. **You must use Create React App** and current versions of React and React-Router-Dom for this assignment.
-
-- - -
-
-### Bonus Live Updates to Saved Books
-
-* Use React routing and [socket.io](http://socket.io) to create a notification or a component that triggers whenever a user saves an book. Your message should include the title of the saved book.
-
-  * Say you have multiple browsers open, each one visiting your site. If you save an book in one browser, then all of your browsers should notify you that a new book was saved.
-
-  * [Socket.io NPM package](https://www.npmjs.com/package/socket.io)
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
